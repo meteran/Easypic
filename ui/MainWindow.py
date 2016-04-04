@@ -16,14 +16,11 @@ except AttributeError:
 
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
-
-
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -48,6 +45,9 @@ class Ui_MainWindow(object):
         self.photos.setObjectName(_fromUtf8("photos"))
         self.view_1 = QtGui.QWidget()
         self.view_1.setObjectName(_fromUtf8("view_1"))
+        self.checkBox = QtGui.QCheckBox(self.view_1)
+        self.checkBox.setGeometry(QtCore.QRect(100, 100, 70, 17))
+        self.checkBox.setObjectName(_fromUtf8("checkBox"))
         self.photos.addTab(self.view_1, _fromUtf8(""))
         self.gridLayout_2.addWidget(self.photos, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -128,8 +128,7 @@ class Ui_MainWindow(object):
         self.info.setFrameShape(QtGui.QFrame.NoFrame)
         self.info.setFrameShadow(QtGui.QFrame.Plain)
         self.info.setLineWidth(1)
-        self.info.setTextInteractionFlags(
-            QtCore.Qt.LinksAccessibleByKeyboard | QtCore.Qt.LinksAccessibleByMouse | QtCore.Qt.TextBrowserInteraction | QtCore.Qt.TextSelectableByKeyboard | QtCore.Qt.TextSelectableByMouse)
+        self.info.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
         self.info.setObjectName(_fromUtf8("info"))
         self.gridLayout_4.addWidget(self.info, 0, 0, 1, 1)
         self.dockWidget_2.setWidget(self.dockWidgetContents_2)
@@ -146,6 +145,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "Easypic", None))
+        self.checkBox.setText(_translate("MainWindow", "CheckBox", None))
         self.photos.setTabText(self.photos.indexOf(self.view_1), _translate("MainWindow", "widok", None))
         self.menuPlik.setTitle(_translate("MainWindow", "Plik", None))
         self.menuEdycja.setTitle(_translate("MainWindow", "Edycja", None))
@@ -159,10 +159,10 @@ class Ui_MainWindow(object):
 
 if __name__ == "__main__":
     import sys
-
     app = QtGui.QApplication(sys.argv)
     MainWindow = QtGui.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+
