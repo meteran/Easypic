@@ -155,3 +155,14 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Katalogi", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Albumy", None))
         self.dockWidget_2.setWindowTitle(_translate("MainWindow", "info", None))
+
+
+if __name__ == "__main__":
+    import sys
+
+    app = QtGui.QApplication(sys.argv)
+    MainWindow = QtGui.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
