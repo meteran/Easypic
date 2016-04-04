@@ -2,7 +2,8 @@
 # coding: utf-8
 
 from modules.helpers import FlowLayout
-from ui.MainWindow import Ui_MainWindow as Window
+from ui.Window import Window
+
 
 
 
