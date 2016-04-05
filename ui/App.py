@@ -23,5 +23,5 @@ class App(QMainWindow):
         self.ui.setupUi(self)
 
         self.session = Session()
-        self.compute = Compute()
+        self.compute = Compute(self.session)
         self.filter = Filter()

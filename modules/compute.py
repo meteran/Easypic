@@ -3,4 +3,5 @@
 
 
 class Compute(object):
-    pass
+    def __init__(self, session):
+        self.session = session
