@@ -1,11 +1,10 @@
 #!/usr/bin/python
 # coding: utf-8
-from PyQt4 import QtGui
-
 from PyQt4.QtGui import QMainWindow
 
 from MainWindow import Ui_MainWindow
 from modules.helpers import FlowLayout
+from modules.session import Session
 
 
 class WindowUi(Ui_MainWindow):
@@ -15,9 +14,10 @@ class WindowUi(Ui_MainWindow):
         self.flowLayout = FlowLayout(self.photos)
 
 
-
-class Window(QMainWindow):
+class App(QMainWindow):
     def __init__(self):
-        super(Window, self).__init__()
+        super(App, self).__init__()
         self.ui = WindowUi()
         self.ui.setupUi(self)
+
+        self.session = Session()
