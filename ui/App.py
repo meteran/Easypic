@@ -3,6 +3,8 @@
 from PyQt4.QtGui import QMainWindow
 
 from MainWindow import Ui_MainWindow
+from modules.compute import Compute
+from modules.filter import Filter
 from modules.helpers import FlowLayout
 from modules.session import Session
 
@@ -21,3 +23,5 @@ class App(QMainWindow):
         self.ui.setupUi(self)
 
         self.session = Session()
+        self.compute = Compute()
+        self.filter = Filter()
