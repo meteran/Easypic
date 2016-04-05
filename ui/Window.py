@@ -13,12 +13,6 @@ class WindowUi(Ui_MainWindow):
         super(WindowUi, self).setupUi(MainWindow)
         self.items = []
         self.flowLayout = FlowLayout(self.photos)
-        self.flowLayout.addItem(QtGui.QLabel(self.photos))
-        self.flowLayout.addItem(QtGui.QLabel(self.photos))
-        self.flowLayout.addItem(QtGui.QLabel(self.photos))
-        self.flowLayout.addItem(QtGui.QLabel(self.photos))
-        self.flowLayout.addItem(QtGui.QLabel(self.photos))
-        self.flowLayout.addItem(QtGui.QLabel(self.photos))
 
 
 class Window(QMainWindow):
