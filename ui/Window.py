@@ -15,6 +15,7 @@ class WindowUi(Ui_MainWindow):
         self.flowLayout = FlowLayout(self.photos)
 
 
+
 class Window(QMainWindow):
     def __init__(self):
         super(Window, self).__init__()
